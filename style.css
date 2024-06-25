@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.Login-Signup-whole {
+  /* display: none;
+  opacity: 0; */
+  width: 600px;
+  height: 100vh;
+  margin: 12rem auto;
+  font-family: 'poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  transition: all ease 0.3s;
+}
+.success-msg {
+  color: #024950;
+  text-align: center;
+}
+
+.login,
+.signup {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  transition: all ease 1s;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.login h1,
+.signup h1 {
+  text-align: center;
+}
+.login form,
+.signup form {
+  width: 80%;
+  margin: auto;
+  /* border: 2px solid black; */
+}
+
+.login form,
+.signup form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login form input,
+.signup form input {
+  border: 1px solid black;
+  margin: 10px;
+  font-size: 16px;
+  padding: 3px;
+  font-family: 'poppins', sans-serif;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  outline: none;
+}
+.login form input:hover,
+.signup form input:hover {
+  border: 2px solid #244855;
+}
+.signup-submit,
+.login-submit {
+  background-color: #244855;
+  color: white;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.signup-submit:hover,
+.login-submit:hover {
+  color: #244855;
+  background-color: white;
+}
+.show-login-error,
+.sign-up-error-msg {
+  margin: 10px;
+  color: rgb(163, 55, 55);
+}
+.show-login-from,
+.show-sign-from {
+  color: #0000ee;
+  text-decoration: underline;
+}
+.signup {
+  visibility: hidden;
+  opacity: 0;
+}
+.inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+.main {
+  margin: auto;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  font-family: 'poppins';
+  transition: all ease 1s;
+}
+
+.whole-container {
+  width: 70%;
+  margin: 1rem auto;
+}
+.main-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+}
+.main .container-contain-items {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+}
+.display-error-msgs {
+  color: white;
+  text-align: center;
+}
+.main-banking-content {
+  background-color: #244855;
+  color: #fff;
+  padding: 2rem;
+}
+.username {
+  font-weight: bolder;
+  font-size: 30px;
+  margin: 10px;
+}
+.message {
+  font-size: 17px;
+  margin-left: 10px;
+}
+.amount-credential {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.amount {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.lock-status {
+  font: 12px;
+  text-decoration: underline;
+}
+.whole-transfer-loan {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0fa4af;
+  justify-content: space-evenly;
+}
+.transfer-functions,
+.loan-functions {
+  height: 100%;
+  display: flex;
+  border: 1px solid transparent;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+}
+.transfer-functions form {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 1rem;
+  gap: 10px;
+  justify-content: center;
+}
+.transfer-functions form input:focus,
+.loan-functions form input:focus {
+  border: 2px solid #244855;
+}
+.loan-functions form {
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.loan-functions form input,
+.transfer-functions form input {
+  font-family: 'poppins';
+  font-weight: bolder;
+  padding: 0.7rem;
+  color: black;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+.whole-History {
+  width: 100%;
+  display: flex;
+  /* border: 3px solid blue; */
+}
+.transaction-history-container {
+  flex: 60%;
+}
+.loan-transaction-history {
+  flex: 40%;
+}
+.transaction-history {
+  padding: 2rem;
+  background-color: #024950;
+  height: 400px;
+  overflow-y: scroll;
+}
+.transaction-history-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+.deposit,
+.done-paid {
+  background-color: #afdde5;
+}
+.withdraw,
+.to-be-paid {
+  background-color: #de7960;
+}
+.to-be-paid button {
+  background-color: #964734;
+}
+.done-paid button {
+  background-color: #afdde5;
+}
+.detail-of-transaction {
+  width: 300px;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+}
+/* .detail-of-amount {
+} */
+.loan-history-container {
+  padding: 2rem;
+  background-color: #024950;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.loan-history-items {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+.done-paid .btn-loan {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: black;
+}
+.to-be-paid .btn-loan {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+.detail-of-loan {
+  display: flex;
+  flex-direction: column;
+}
+.loan-history-container {
+  display: flex;
+  flex-direction: column;
+}
+.fa-solid {
+  padding: 1rem;
+  background-color: white;
+  margin-top: 10px;
+  font-size: 25px;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+  body {
+    overflow: visible;
+  }
+  .whole-container {
+    width: 95%;
+  }
+  .main .container-contain-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  .whole-transfer-loan {
+    height: auto;
+    padding: 1rem;
+  }
+  .transfer-functions form {
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column;
+    border: 1px solid transparent;
+    padding: 1rem;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .whole-History {
+    width: 100%;
+  }
+  .whole-History h1 {
+    font-size: 20px;
+  }
+  .detail-of-transaction {
+    width: auto;
+  }
+  .fa-solid {
+    padding: 0.5rem;
+    background-color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 700px) {
+  body {
+    overflow: visible;
+  }
+  .Login-Signup-whole {
+    width: 100%;
+  }
+  .main {
+    height: auto;
+  }
+  .whole-container {
+    width: 95%;
+  }
+  .main .container-contain-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .whole-transfer-loan {
+    height: auto;
+    padding: 1rem;
+  }
+  .transfer-functions form {
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column;
+    border: 1px solid transparent;
+    padding: 1rem;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .loan-functions form {
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .whole-History {
+    width: 100%;
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-rows: 1fr 1fr;
+    height: 700px;
+  }
+  .whole-History h1 {
+    font-size: 20px;
+  }
+  .transaction-history {
+    height: 300px;
+  }
+  .loan-history-container {
+    height: 300px;
+  }
+  .detail-of-transaction {
+    width: auto;
+  }
+  .fa-solid {
+    padding: 0.5rem;
+    background-color: white;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+}
